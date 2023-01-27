@@ -1,5 +1,5 @@
 let form_count = 1;
-const hobby_array = ['읽고_쓰기', '보고_듣기', '운동', '창작', '꾸미기', '수집', '즐기기', '먹기', '기술', '공부_자기계발', '예술', '키우기', '휴식_힐링', '봉사'];
+const hobby_array = ['읽고_쓰기', '보고_듣기', '운동', '창작', '꾸미기', '수집', '즐기기', '먹기', '공부_자기계발', '예술', '키우기', '휴식_힐링'];
 
 const select_changed = (select_num) => {
     const changed_select = document.querySelector('.like-select-' + select_num);

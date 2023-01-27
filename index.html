@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>작고 세미한 소리</title>
         <link href="index.css" rel="stylesheet" />
-        <script src="index.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-white dark:bg-gray-800 items-center">
         <div class="w-full flex justify-center">
             <div class="w-9/12 bg-white dark:bg-gray-800" >
-                <h2 class="my-10 text-4xl font-extrabold dark:text-white text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-100">작고 세미한</span> 소리</h2>
+                <h2 class="my-10 text-4xl font-extrabold dark:text-white text-center">셀프브랜딩 - <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-100">작고 세미한</span> 소리</h2>
                 <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
                     <div class="flex items-center justify-center px-3 py-2 rounded-lg dark:border-gray-600">
-                        <h3 class="my-1 text-lg text-gray-900 dark:text-white">1. 여러분이 했을 때 즐거웠던 활동에는 무엇이 있나요?</h3>
+                        <h3 class="my-1 text-lg text-gray-900 dark:text-white">1. 여러분이 했을 때 즐거웠거나 잘했던 활동에는 무엇이 있나요?</h3>
                     </div>
-                    <div class="flex px-3 py-3 justify-center bg-white dark:bg-gray-800 rounded-b-lg">
-                        <div class="w-full flex border border-gray-500 rounded-lg p-1 justify-around">
-                            <div class="w-1/3 flex flex-row items-center">
+                    <div class="hobby-form-container flex px-3 py-3 flex-col justify-center items-center bg-white dark:bg-gray-800 rounded-b-lg">
+                        <div class="hobby-form-0 w-full flex flex-row items-center border border-gray-500 rounded-lg mb-2 p-1 justify-around">
+                            <div class="w-auto flex flex-row items-center p-2">
                                 <span class="text-gray-900 text-base dark:text-white mx-2">분류 :</span>
-                                <select class="like-select w-3/4 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select class="like-select-0 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onchange="select_changed(0)">
+                                    <option value="선택">선택해주세요.</option>
                                     <option value="읽고_쓰기">읽고 쓰기</option>
                                     <option value="보고_듣기">보고 듣기</option>
                                     <option value="운동">운동</option>
@@ -39,10 +39,12 @@
                                     <option value="기타">기타</option>
                                 </select>
                             </div>
-                            <div class="w-3/4 flex flex-row items-center">
+                            <div class=" flex flex-row items-center">
                                 <span class="text-gray-900 text-base dark:text-white mx-2">세부활동:</span>
-                                
-                                <select class="읽고_쓰기 w-1/2 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select class="like-select-placeholder-0 sub-select-0 선택 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option>분류를 선택해주세요.</option>
+                                </select>
+                                <select class="hide sub-select-0 읽고_쓰기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option>책 읽기</option>
                                     <option>인터넷 서핑</option>
                                     <option>블로그</option>
@@ -52,14 +54,14 @@
                                     <option>다이어리 꾸미기</option>
                                     <option>성경 읽기</option>
                                 </select>
-                                <select style="display: none;" class="보고_듣기 w-1/2 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select class="hide sub-select-0 보고_듣기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option>영화 보기</option>
                                     <option>음악 듣기</option>
                                     <option>드라마 보기</option>
                                     <option>뮤지컬, 연극 보기</option>
                                     <option>박물관, 미술관 가기</option>
                                 </select>
-                                <select style="display: none;" class="운동 w-1/2 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select class="hide sub-select-0 운동-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option>여행</option>
                                     <option>등산</option>
                                     <option>축구</option>
@@ -88,25 +90,67 @@
                                     <option>배드민턴</option>
                                     <option>요가</option>
                                 </select>
-                                <select style="display: none;" class="보고_듣기 w-1/2 flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option>공예</option>
-                                    <option>그리기</option>
-                                    <option>인형 만들기</option>
-                                    <option>액세서리 만들기</option>
-                                    <option>장난감 조립하기</option>
-                                    <option>전자제품 조립하기</option>
-                                    <option>자수</option>
-                                    <option>뜨개질</option>
-                                    <option>사진 찍기</option>
-                                    <option>작사, 작곡</option>
-                                    <option>프로그래밍</option>
+                                <select class="hide sub-select-0 창작-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 </select>
-                                <input disabled class="like-etc w-64 h-10 border mx-2 dark:border-gray-600 border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700" type="text" />
+                                <select class="hide sub-select-0 꾸미기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 수집-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 즐기기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 먹기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 기술-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 공부_자기계발-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 예술-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 키우기-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 휴식_힐링-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <select class="hide sub-select-0 봉사-0 w-auto flex-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                </select>
+                                <input class="hide like-etc-0 grow h-10 border dark:border-gray-600 border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700" type="text" />
                             </div>
+                        </div>
+                        <button class="add-hobby-form flex w-40 h-10 justify-center items-center p-2 mt-3 mb-1 text-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800" onclick="add_hobby_form()">항목 추가</button>
+                    </div>
+                </div>
+                <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                    <div class="flex items-center justify-center px-3 py-2 rounded-lg dark:border-gray-600">
+                        <h3 class="my-1 text-lg text-gray-900 dark:text-white">2. 신앙생활을 해오면서 은혜 받았던 설교 내용이나 성경구절의 내용은 무엇인가요?</h3>
+                    </div>
+                    <div class="logos-form-container flex px-3 py-3 flex-col justify-center items-center bg-white dark:bg-gray-800 rounded-b-lg">
+                        <div class="w-full logos-form mx-8 p-2 flex flex-row items-center">
+                            <input class="logos-text w-full h-10 px-4 border dark:border-gray-600 border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white" type="text" />
+                        </div>
+                        <button class="add-logos-form flex w-40 h-10 justify-center items-center p-2 mt-3 mb-1 text-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800" onclick="add_logos_form()">항목 추가</button>
+                    </div>
+                </div>
+                <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                    <div class="flex items-center justify-center px-3 py-2 rounded-lg dark:border-gray-600">
+                        <h3 class="my-1 text-lg text-gray-900 dark:text-white">여러분이 되고 싶은 모습을 적어보세요.</h3>
+                    </div>
+                    <div class="vision-form-container flex px-3 py-3 flex-col justify-center items-center bg-white dark:bg-gray-800 rounded-b-lg">
+                        <div class="w-full vision-form mx-8 p-2 flex flex-col items-center">
+                            <div class="w-full vision-input flex flex-row justify-center items-center">
+                                <h2 class="my-4 text-2xl font-extrabold dark:text-white text-center">나는 </h2>
+                                <input class="vision-verb-text max-w-96 h-10 mx-2 px-4 border dark:border-gray-600 border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white" type="text" />
+                                <input class="vision-adj-text max-w-96 h-10 mr-2 px-4 border dark:border-gray-600 border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white" type="text" />
+                                <h2 class="my-4 text-2xl font-extrabold dark:text-white text-center">사람이 될 것이다.</h2>
+                            </div>
+                            <button class="submit-vision-title flex w-40 h-10 justify-center items-center p-2 mt-3 mb-1 text-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800" onclick="vision_text_conv(false)">확인</button>
+                        </div>
+                        <div class="w-full vision-title mx-8 p-2 flex-col items-center hide">
+                            <h2 class="my-4 vision-title-h2 text-3xl font-extrabold dark:text-white text-center">나는 <span class="vision-verb-title text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-100">무엇무엇하는</span> <span class="vision-adj-title text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-100">어떠한</span> 사람이 될 것이다.</h2>
+                            <button class="edit-vision-title flex w-40 h-10 justify-center items-center p-2 mt-3 mb-1 text-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800" onclick="vision_text_conv(true)">수정</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
